@@ -16,7 +16,7 @@ async function convertFromList() {
 	yCoord = widget[0].y
 	
 	var newText = document.getElementById("widget-text").value
-	stickiesList = newText.split(" . ")
+	stickiesList = newText.split(" - ")
 	
 	for (var i = 0; i < stickiesList.length; i++) {
 		rtb.board.widgets.stickers.create({text: stickiesList[i], x: xCoord, y: yCoord+100})
@@ -25,7 +25,3 @@ async function convertFromList() {
 	}
 	
 }
-
-
-
-
