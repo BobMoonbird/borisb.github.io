@@ -15,7 +15,7 @@ async function convertFromList() {
 	xCoord = widget[0].x
 	yCoord = widget[0].y
 	
-	var newText = document.getElementById("widget-text").value
+	var newText = widget[0]['text']
 	stickiesList = newText.split("</li>")
 	element = sticliesList.pop()
 	
