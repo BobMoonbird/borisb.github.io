@@ -17,7 +17,7 @@ async function convertFromList() {
 	
 	var newText = widget[0]['text']
 	stickiesList = newText.split("</li>")
-	element = sticliesList.pop()
+	element = stickiesList.pop()
 	
 	for (var i = 0; i < stickiesList.length; i++) {
 		rtb.board.widgets.stickers.create({text: stickiesList[i], x: xCoord, y: yCoord+100})
