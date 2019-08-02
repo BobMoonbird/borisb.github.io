@@ -22,7 +22,22 @@ rtb.onReady(() => {
 						}
 						else {
 							
-							rtb.board.openLeftSidebar('sidebar.html')
+							async function convertFromList() {
+								let widget = await rtb.board.selection.get()
+								xCoord = widget[0].x
+								yCoord = widget[0].y
+
+								var newText = widget[0]['text']
+								stickiesList = newText.split("</li>")
+								element = stickiesList.pop()
+
+								for (var i = 0; i < stickiesList.length; i++) {
+									rtb.board.widgets.stickers.create({text: stickiesList[i], x: xCoord, y: yCoord+100})
+									xCoord = xCoord+200
+
+	}
+	
+}
 
 						}	
 				}
