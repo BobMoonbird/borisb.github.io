@@ -22,7 +22,7 @@ rtb.onReady(() => {
 						}
 						else {
 							
-							async function convertFromList() {
+							
 								let widget = await rtb.board.selection.get()
 								xCoord = widget[0].x
 								yCoord = widget[0].y
@@ -35,7 +35,7 @@ rtb.onReady(() => {
 									rtb.board.widgets.stickers.create({text: stickiesList[i], x: xCoord, y: yCoord+100})
 									xCoord = xCoord+200}
                                     
-                            }
+                            
 
 						}	
 				}
