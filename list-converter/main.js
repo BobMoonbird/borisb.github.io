@@ -33,11 +33,9 @@ rtb.onReady(() => {
 
 								for (var i = 0; i < stickiesList.length; i++) {
 									rtb.board.widgets.stickers.create({text: stickiesList[i], x: xCoord, y: yCoord+100})
-									xCoord = xCoord+200
-
-	}
-	
-}
+									xCoord = xCoord+200}
+                                    
+                            }
 
 						}	
 				}
