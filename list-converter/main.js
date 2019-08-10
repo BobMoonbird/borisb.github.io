@@ -32,7 +32,7 @@ rtb.onReady(() => {
 								element = stickiesList.pop()
 
 								for (var i = 0; i < stickiesList.length; i++) {
-									rtb.board.widgets.create({type: 'sticker', text: stickiesList[i], x: xCoord, y: yCoord+100, style:{textAlgin:'c', textVerticalAlign:'m', fontSize:64}})
+									rtb.board.widgets.create({type: 'sticker', text: stickiesList[i], x: xCoord, y: yCoord+100, style:{textAlign:'c', textAlignVertical:'m', fontSize:64}})
 									xCoord = xCoord+200}
                                     
                             
