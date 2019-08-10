@@ -14,10 +14,10 @@ rtb.onReady(() => {
 							}
 
 							//numberLines = objects.length
-							height = 32+objects.length*objects[0].style.fontSize
+							height = objects.length*objects[0].style.fontSize
 							width = objects[0].bounds.width*2
 							textList = texts.join("<br/>")
-							let newList = await rtb.board.widgets.create({type: 'shape', text: textList, x: objects[0]['x'], y:objects[0]['y']+100, style: {fontSize: objects[0].style.fontSize}, height: height, width: width})
+							let newList = await rtb.board.widgets.create({type: 'text', text: textList, x: objects[0]['x'], y:objects[0]['y']+100, style: {fontSize: objects[0].style.fontSize}, height: height, width: width})
 							//rtb.board.widgets.update(newList.id, {height: height})	
 						}
 						else {
