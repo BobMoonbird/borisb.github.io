@@ -22,7 +22,7 @@ rtb.onReady(() => {
 							
 							//numberLines = objects.length
 							height = objects.length*20
-							width = longest_string(texts)[0].length*200
+							width = longest_string(texts)[0].length*20
 							textList = texts.join("<br/>")
 							let newList = await rtb.board.widgets.create({type: 'text', text: textList, x: objects[0]['x'], y:objects[0]['y']+100, style: {fontSize: objects[0].style.fontSize}, height: height, width: width})
 							//rtb.board.widgets.update(newList.id, {height: height})	
