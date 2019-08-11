@@ -30,10 +30,14 @@ rtb.onReady(() => {
 								var newText = widget[0]['text']
 								stickiesList = newText.split("</li>")
 								element = stickiesList.pop()
+								
+								var newObjects = []
 
 								for (var i = 0; i < stickiesList.length; i++) {
-									rtb.board.widgets.stickers.create({text: stickiesList[i].replace(/<[^>]+>/g,''), x: xCoord, y: yCoord+100, style:{textAlign:'c', textAlignVertical:'m', fontSize:64}})
+									newObjects.push({type: 'sticker',text: stickiesList[i].replace(/<[^>]+>/g,''), x: xCoord, y: yCoord+100, style:{textAlign:'c', textAlignVertical:'m', fontSize:64}})
 									xCoord = xCoord+200}
+								
+								rtb.board.widgets.create(newObjects)
                                     
                             
 
