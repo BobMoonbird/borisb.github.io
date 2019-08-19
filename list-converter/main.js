@@ -2,7 +2,7 @@ rtb.onReady(() => {
 	 rtb.initialize({
 		extensionPoints: {
 			toolbar: async () => {
-            const authorized = await miro.isAuthorized()
+            const authorized = await rtb.isAuthorized()
             if (authorized) {
             return {
 				title:'List Converter',
