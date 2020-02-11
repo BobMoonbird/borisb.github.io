@@ -31,4 +31,3 @@ rtb.onReady(() => {
 		})
 
 	})
-© 2020 GitHub, Inc.
