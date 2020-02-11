@@ -1,4 +1,6 @@
 rtb.onReady(() => {
+	
+	let token = await rtb.getToken();
 	 rtb.initialize({
 		extensionPoints: {
 			toolbar:{
