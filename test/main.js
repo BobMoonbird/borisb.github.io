@@ -31,5 +31,5 @@ rtb.onReady(() => {
 			}
 		}
 		})
-	
+	let token = await miro.getToken(); 
 	})
