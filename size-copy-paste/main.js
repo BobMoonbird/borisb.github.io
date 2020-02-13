@@ -7,7 +7,9 @@ miro.onReady(() => {
                     return {
                         tooltip: 'Paste',
                         svgIcon: '<path d="M12 2.617L2.617 12 12 21.383 21.383 12 12 2.617zm.707-2.121l10.797 10.797a1 1 0 0 1 0 1.414L12.707 23.504a1 1 0 0 1-1.414 0L.496 12.707a1 1 0 0 1 0-1.414L11.293.496a1 1 0 0 1 1.414 0z"></path>',
-                        onClick: onClick
+                        onClick: () =>{
+                        miro.board.ui.openBottomPanel('bottompanel.html', options:{width:320, height:200})
+                        }
                     }
                 }
             }
@@ -16,7 +18,8 @@ miro.onReady(() => {
 
 })
 
-async function onClick() {
+//async function onClick() {
+    
     /*let objects = await miro.board.selection.get()
     if (objects.length > 1) {
         var texts = []
@@ -71,4 +74,4 @@ async function onClick() {
      /*   miro.board.widgets.create(newObjects)
 
     }*/
-}
+//}
