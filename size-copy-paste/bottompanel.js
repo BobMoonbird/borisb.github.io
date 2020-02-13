@@ -11,6 +11,9 @@ async function getWidget() {
   // Get selected widgets
   let widgets = await miro.board.selection.get()
       console.log(widgets);
+  if (!widgets || !widgets.length){
+    return;
+  }
   
   var widgetWidth = document.getElementById('widget-width')
   var widgetHeight = document.getElementById('widget-height')
