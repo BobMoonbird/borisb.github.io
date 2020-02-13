@@ -1,12 +1,14 @@
 miro.onReady(() => {
   // subscribe on user selected widgets
   //miro.addListener(miro.enums.event.SELECTION_UPDATED, getWidget)
+  console.log(234);
   getWidget()
 })
 
 async function getWidget() {
   // Get selected widgets
   let widgets = await miro.board.selection.get()
+      console.log(widgets);
   
   var widgetWidth = document.getElementById('widget-width')
   var widgetHeight = document.getElementById('widget-height')
