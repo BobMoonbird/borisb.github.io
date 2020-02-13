@@ -1,8 +1,10 @@
-miro.onReady(() => {
+miro.onReady(async () => {
   // subscribe on user selected widgets
   //miro.addListener(miro.enums.event.SELECTION_UPDATED, getWidget)
   console.log(234);
   getWidget()
+  
+  await miro.addListener('SELECTION_UPDATED', (e) => {  { getWidget() } }
 })
 
 async function getWidget() {
@@ -17,8 +19,6 @@ async function getWidget() {
   widgetWidth.value = widgets[0].bounds.width
   widgetHeight.value = widgets[0].bounds.height
   console.log(widgetWidth.value, widgetHeight.value)
-  
-}
 
 async function updateWidget(width, height) {
   
