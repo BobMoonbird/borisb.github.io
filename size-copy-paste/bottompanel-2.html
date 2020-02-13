@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+      <div className="edit-mode">
+				<div className="btn play-button" onClick={() => this.play()}>
+					<SVG className="icon" src={PlayIcon}/>
+				</div>
+				<div className="btn hotspot-button" onClick={() => this.createHotspot()}>
+					<SVG className="icon" src={SquareIcon}/>
+					<span>Hotspot</span>
+				</div>
+				<div className="btn link-button" onClick={() => this.getLink()}>
+					<SVG className="icon" src={LinkIcon}/>
+					<span>Autoplay link</span>
+				</div>
+			</div>
+</html>
