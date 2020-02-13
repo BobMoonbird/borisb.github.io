@@ -11,6 +11,7 @@ miro.onReady(() => {
                             await miro.board.ui.openBottomPanel('bottompanel-2.html', {width:320, height:56});
                             await miro.addListener('SELECTION_UPDATED', (e) => { 
                                 if (e.data.length == 0) { miro.board.ui.closeBottomPanel() } 
+                                console.log(321)
                             })
                         },
                     }
