@@ -31,7 +31,7 @@ async function updateWidget() {
   var newWidth = document.getElementById("widget-width").value
   var newHeight = document.getElementById("widget-height").value
   
-  miro.board.widgets.update({id, width=newWidth, height=newHeight})
+  miro.board.widgets.update({id:widget[0].id, width=newWidth, height=newHeight})
 
  
 }
