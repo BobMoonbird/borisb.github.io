@@ -22,8 +22,8 @@ async function getWidget() {
 
 async function updateWidget(width, height) {
   
-  let widgets = await miro.board.selection.get()
+  /*let widgets = await miro.board.selection.get()
   miro.board.widgets.update({id,width:width, height: height})
-  
+  */
 }
 
