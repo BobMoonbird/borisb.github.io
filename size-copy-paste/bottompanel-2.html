@@ -24,11 +24,11 @@
 
 <div class="actions" style="display: inline">
     <!-- <textarea name="widget-width" rows="1" wrap="hard" class="actions" id="widget-width"></textarea> -->
-    <input type="text" class="miro-input miro-input--small" value="width">
+    <input type="text" class="miro-input miro-input--small" id="widget-width" value="width" onchange="updateWidget(this.value, document.getElemenetById('widget-height').value)">
 </div>
 <div class="actions" style="display: inline">
     <!-- <textarea name="widget-width" rows="1" wrap="hard" class="actions" id="widget-width"></textarea> -->
-    <input type="text" class="miro-input miro-input--small" value="height">
+    <input type="text" class="miro-input miro-input--small" id="widget-height" value="height" onchange="updateWidget(document.getElemenetById('widget-width').value, this.value)">
 </div>
 		
 <!-- <div class="actions" style="display: inline">
