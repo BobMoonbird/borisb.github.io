@@ -8,7 +8,7 @@
 	.miro-input--small {
             display: inline;
             margin-top: 10px;
-            width: 20px;
+            width: 100px;
 		}
 		
         .miro-btn--small {
@@ -23,13 +23,18 @@
 	<body>
 
 <div class="actions" style="display: inline">
-    <!-- <textarea name="widget-width" rows="1" wrap="hard" class="actions" id="widget-width"></textarea> -->
-    <input type="text" class="miro-input miro-input--small" id="widget-width" value="width" onchange="updateWidget(this.value, document.getElemenetById('widget-height').value)">
+    <input type="text" width="100px" class="miro-input miro-input--small" id="widget-width">
 </div>
 <div class="actions" style="display: inline">
-    <!-- <textarea name="widget-width" rows="1" wrap="hard" class="actions" id="widget-width"></textarea> -->
-    <input type="text" class="miro-input miro-input--small" id="widget-height" value="height" onchange="updateWidget(document.getElemenetById('widget-width').value, this.value)">
+    <input type="text" width="100px" class="miro-input miro-input--small" id="widget-height">
 </div>
+		
+<!-- <div class="actions" style="display: inline">
+    <input type="text" class="miro-input miro-input--small" id="widget-width" value="0" onchange="updateWidget(this.value, document.getElemenetById('widget-height').value)">
+</div>
+<div class="actions" style="display: inline">
+    <input type="text" class="miro-input miro-input--small" id="widget-height" value="1" onchange="updateWidget(document.getElemenetById('widget-width').value, this.value)">
+</div> -->
 		
 <!-- <div class="actions" style="display: inline">
     <button class="miro-btn miro-btn--primary miro-btn--small">Primary</button>
