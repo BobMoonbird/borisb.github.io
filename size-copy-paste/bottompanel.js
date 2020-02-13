@@ -1,6 +1,6 @@
 miro.onReady(() => {
   // subscribe on user selected widgets
-  miro.addListener(miro.enums.event.SELECTION_UPDATED, getWidget)
+  //miro.addListener(miro.enums.event.SELECTION_UPDATED, getWidget)
   getWidget()
 })
 
