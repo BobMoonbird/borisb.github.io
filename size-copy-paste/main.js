@@ -6,7 +6,7 @@ miro.onReady(() => {
                 if (authorized) {
                     return {
                         tooltip: 'Paste',
-                        svgIcon: '<svg><text x="0" y="15" fill="red">I love SVG!</text></svg>,
+                        svgIcon: '<svg><text x="0" y="15" fill="red">I love SVG!</text></svg>',
                         onClick: onClick
                     }
                 }
