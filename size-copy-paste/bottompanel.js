@@ -12,12 +12,12 @@ async function getWidget() {
   
   var widgetWidth = document.getElementById('widget-width')
   var widgetHeight = document.getElementById('widget-height')
-
+  console.log(widgetWidth, widgetHeight)
+  
   widgetWidth.value = widgets[0].bounds.width
   widgetHeight.value = widgets[0].bounds.height
-
-  // Get first widget from selected widgets
-  let text = widgets[0].text
+  console.log(widgetWidth.value, widgetHeight.value)
+  
 }
 
 async function updateWidget(width, height) {
