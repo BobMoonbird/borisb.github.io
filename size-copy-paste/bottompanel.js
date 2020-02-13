@@ -29,8 +29,8 @@ async function updateWidget() {
   let widget = await miro.board.selection.get()
   console.log(widget[0].id)
   
-  var newWidth = document.getElementById("widget-width").value
-  var newHeight = document.getElementById("widget-height").value
+  var newWidth = parseInt(document.getElementById("widget-width").value)
+  var newHeight = parseInt(document.getElementById("widget-height").value)
   console.log(newWidth, newHeight)
   
   miro.board.widgets.update({id:widget[0].id, width:newWidth, height:newHeight})
