@@ -19,6 +19,7 @@ async function getWidget() {
   widgetWidth.value = widgets[0].bounds.width
   widgetHeight.value = widgets[0].bounds.height
   console.log(widgetWidth.value, widgetHeight.value)
+}
 
 async function updateWidget(width, height) {
   
@@ -26,4 +27,3 @@ async function updateWidget(width, height) {
   miro.board.widgets.update({id,width:width, height: height})
   */
 }
-
