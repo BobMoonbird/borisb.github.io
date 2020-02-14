@@ -4,8 +4,8 @@ miro.onReady(async () => {
 
   getWidget()
   
-  await miro.addListener('WIDGETS_TRANSFORMATION_UPDATED', (e) => {  { getWidget(); console.log(321) } })
-  await miro.addListener('SELECTION_UPDATED', (e) => {  { getWidget(); console.log(123) } })
+  await miro.addListener('WIDGETS_TRANSFORMATION_UPDATED', (e) => {  { getWidget(); } })
+  await miro.addListener('SELECTION_UPDATED', (e) => {  { getWidget(); } })
 })
 
 async function getWidget() {
