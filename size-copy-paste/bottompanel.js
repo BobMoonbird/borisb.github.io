@@ -4,8 +4,8 @@ miro.onReady(async () => {
 
   getWidget()
   
-  await miro.addListener('WIDGETS_TRANSFORMATION_UPDATED', (e) => {  { getWidget(); console.log(321) } })
-  await miro.addListener('SELECTION_UPDATED', (e) => {  { getWidget(); console.log(123) } })
+  await miro.addListener('WIDGETS_TRANSFORMATION_UPDATED', (e) => {  { getWidget(); } })
+  await miro.addListener('SELECTION_UPDATED', (e) => {  { getWidget(); } })
 })
 
 async function getWidget() {
@@ -16,7 +16,7 @@ async function getWidget() {
     return;
   }
   
-  var widgetWidth = document.getElementById('widget-width')
+  var widgetWidth = document .getElementById('widget-width')
   var widgetHeight = document.getElementById('widget-height')
 
   
@@ -35,6 +35,5 @@ async function updateWidget() {
 
   
   miro.board.widgets.update({id:widget[0].id, width:newWidth, height:newHeight})
-
  
 }
