@@ -10,7 +10,7 @@ miro.onReady(() => {
                         onClick: async () =>{
                         await miro.board.ui.__hideButtonsPanels('all')
                         await miro.addListener(ESC_PRESSED, showAll)
-                        await showAll()
+                        
                         },  
                     }
                 }
