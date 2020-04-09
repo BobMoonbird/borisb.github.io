@@ -15,14 +15,13 @@ miro.onReady(() => {
                 }
             }*/
          
-            getWidgetMenuItems: (widgets) => {
+            getWidgetMenuItems: async() => {
                 const authorized = await miro.isAuthorized()
                 if (authorized) {
-                
                 return {
                 	tooltip: 'Hi',
-					svgIcon: icon24,
-					onClick: onClick
+			svgIcon: icon24,
+			onClick: onClick
                 }}
 
 			}
