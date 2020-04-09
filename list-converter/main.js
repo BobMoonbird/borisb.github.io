@@ -3,7 +3,7 @@ const icon24 = '<path fill="currentColor" fill-rule="nonzero" d="M20.156 7.762c-
 miro.onReady(() => {
     miro.initialize({
         extensionPoints: {
-            /*toolbar: async () => {
+            toolbar: async () => {
                 const authorized = await miro.isAuthorized()
                 if (authorized) {
                     return {
@@ -13,7 +13,7 @@ miro.onReady(() => {
                         onClick: onClick
                     }
                 }
-            }*/
+            },
          
             getWidgetMenuItems: async() => {
                 const authorized = await miro.isAuthorized()
