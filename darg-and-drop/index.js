@@ -16,6 +16,7 @@ function run() {
 					svgIcon: icon24,
 					onClick: (widgets) => {
 						console.log('onClick', widgets)
+						miro.board.widgets.create({type: 'sticker', x: 70, y: -80, text: 'Lorem Ipsum'})
 					}
 				})
 			}
