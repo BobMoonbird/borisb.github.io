@@ -66,10 +66,19 @@ const listToStickies = async (objects) => {
         let newText = widget[0]['text']
         stickiesList = newText.split("</li>")
 
+        function longest_string(str_ara) {	
+            var max = str_ara[0].length;	
+            str_ara.map(v => max = Math.max(max, v.length));	
+            result = str_ara.filter(v => v.length == max);	
+            return result;	
+        }
+
+
         let newObjects = []
 
         for (let i = 0; i < stickiesList.length; i++) {
             newObjects.push({
+                width = longest_string(texts)[0].length * 20,
                 type: 'STICKER',
                 text: stickiesList[i].replace(/<[^>]+>/g, ''),
                 x: objects[0].x + 200,
