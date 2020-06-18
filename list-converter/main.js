@@ -34,7 +34,7 @@ miro.onReady(() => {
                         }
                     } else if (objects.length === 1 && objects[0].type === "TEXT") {
                         return {
-                            tooltip: 'List Converter',
+                            tooltip: 'convert to stickies',
                             svgIcon: iconStickyBulk,
                             onClick: onClick
                         }
