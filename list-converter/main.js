@@ -74,7 +74,9 @@ const stickiesToList = async (objects) => {
 const listToStickies = async (objects) => {
 
         let newText = objects[0]['text']
+        console.log(newText)
         stickiesList = newText.split("</li>")
+        stickiesList.pop()
 
         let newObjects = []
 
