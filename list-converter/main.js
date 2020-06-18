@@ -45,7 +45,7 @@ miro.onReady(() => {
 
 })
 
-const stickiesToList = (objects) => {
+const stickiesToList = async (objects) => {
     let texts = []
         for (let i = 0; i < objects.length; ++i) {
             texts.push(objects[i].text)
@@ -61,7 +61,7 @@ const stickiesToList = (objects) => {
         })
 }
 
-const listToStickies = (objects) => {
+const listToStickies = async (objects) => {
 
         let newText = widget[0]['text']
         stickiesList = newText.split("</li>")
