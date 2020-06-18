@@ -70,7 +70,7 @@ const stickiesToList = async (objects) => {
             text: '<ul>'+textList+'</ul>',
             x: objects[0]['x'],
             y: objects[0]['y'] + 100,
-            scale: (objects[0].bounds.width/objects[0].style.fontSize),
+            scale: (objects[0].bounds.width/12),
             width: width
         })
 }
