@@ -73,7 +73,7 @@ const stickiesToList = async (objects) => {
 
 const listToStickies = async (objects) => {
 
-        let newText = widget[0]['text']
+        let newText = objects[0]['text']
         stickiesList = newText.split("</li>")
 
         let newObjects = []
