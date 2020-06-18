@@ -81,7 +81,6 @@ const listToStickies = async (objects) => {
         yCoord = objects[0].y
 
         let newText = objects[0]['text']
-        console.log(newText)
         stickiesList = newText.split("</li>")
         stickiesList.pop()
 
