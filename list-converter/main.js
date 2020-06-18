@@ -3,7 +3,7 @@ const icon24 = '<path fill="currentColor" fill-rule="nonzero" d="M20.156 7.762c-
 miro.onReady(() => {
     miro.initialize({
         extensionPoints: {
-            toolbar: async () => {
+            /*toolbar: async () => {
                 const authorized = await miro.isAuthorized()
                 if (authorized) {
                     return {
@@ -13,7 +13,7 @@ miro.onReady(() => {
                         onClick: onClick
                     }
                 }
-            },
+            },*/
          
             getWidgetMenuItems: async() => {
                 const authorized = await miro.isAuthorized()
@@ -44,10 +44,8 @@ miro.onReady(() => {
 
 })
 
-async function onClick() {
-    let objects = await miro.board.selection.get()
-    if (objects.length > 1) {
-        var texts = []
+const stickiesToList = (objects) => {
+    var texts = []
         for (var i = 0; i < objects.length; ++i) {
             texts.push(objects[i].text)
         }
@@ -73,9 +71,10 @@ async function onClick() {
             width: width
         })
         //miro.board.widgets.update(newList.id, {height: height})
-    } else {
+}
 
-        let widget = await  miro.board.selection.get()
+const listToStickies = (objects) => {
+    let widget = await  miro.board.selection.get()
         xCoord = widget[0].x
         yCoord = widget[0].y
 
@@ -97,6 +96,18 @@ async function onClick() {
         }
 
         miro.board.widgets.create(newObjects)
+
+}
+
+async function onClick() {
+    let objects = await miro.board.selection.get()
+    if (objects.length > 1) {
+
+        stickiesToList(objects)
+        
+    } else {
+
+        listToStickies(objects)
 
     }
 }
