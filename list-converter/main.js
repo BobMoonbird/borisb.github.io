@@ -58,14 +58,16 @@ const stickiesToList = async (objects) => {
             return result;	
         }
 
+        width = longest_string(texts)[0].length * 20
+
         textList = texts.join("<br/>")
         let newList = await miro.board.widgets.create({
-            width = longest_string(texts)[0].length * 20,
             type: 'TEXT',
             text: textList,
             x: objects[0]['x'],
             y: objects[0]['y'] + 100,
-            scale: (objects[0].bounds.width/objects[0].style.fontSize)
+            scale: (objects[0].bounds.width/objects[0].style.fontSize),
+            width: width
         })
 }
 
