@@ -73,6 +73,9 @@ const stickiesToList = async (objects) => {
 
 const listToStickies = async (objects) => {
 
+        xCoord = objects[0].x	
+        yCoord = objects[0].y
+
         let newText = objects[0]['text']
         console.log(newText)
         stickiesList = newText.split("</li>")
@@ -82,13 +85,13 @@ const listToStickies = async (objects) => {
 
         for (let i = 0; i < stickiesList.length; i++) {
             newObjects.push({
-                
                 type: 'STICKER',
                 text: stickiesList[i].replace(/<[^>]+>/g, ''),
-                x: objects[0].x + 200,
-                y: objects[0].y + 100,
+                x: xCoord,
+                y: yCoord + 100,
                 style: {textAlign: 'c', textAlignVertical: 'm', fontSize: 64}
             })
+            xCoord += 200
             
         }
 
