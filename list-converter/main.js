@@ -48,7 +48,7 @@ miro.onReady(() => {
 const stickiesToList = async (objects) => {
     let texts = []
         for (let i = 0; i < objects.length; ++i) {
-            texts.push(objects[i].text)
+            texts.push('<li>'+objects[i].text+'</li>')
         }
 
         function longest_string(str_ara) {	
@@ -58,12 +58,12 @@ const stickiesToList = async (objects) => {
             return result;	
         }
 
-        width = longest_string(texts)[0].length * 20
+        width = longest_string(texts)[0].length * 5
 
-        textList = texts.join("<br/>")
+        textList = texts.join('')
         let newList = await miro.board.widgets.create({
             type: 'TEXT',
-            text: textList,
+            text: '<ul>'+textList+'</ul>',
             x: objects[0]['x'],
             y: objects[0]['y'] + 100,
             scale: (objects[0].bounds.width/objects[0].style.fontSize),
@@ -75,9 +75,6 @@ const listToStickies = async (objects) => {
 
         let newText = widget[0]['text']
         stickiesList = newText.split("</li>")
-
-        
-
 
         let newObjects = []
 
