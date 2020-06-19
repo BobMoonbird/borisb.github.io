@@ -16,16 +16,16 @@ miro.onReady(() => {
 
                     if (objects.every(isStickie)) {
                         return {
-                            tooltip: 'Convert into bullet list',
+                            tooltip: 'convert to bullet list',
                             svgIcon: iconBulList,
-                            onClick: onClickToBullet(objects)
+                            onClick: onClick
                             
                         }
                     } else if (objects.length === 1 && objects[0].type === "TEXT") {
                         return {
                             tooltip: 'convert to stickies',
                             svgIcon: iconStickyBulk,
-                            onClick: onClickToStickies(objects)
+                            onClick: onClick
                         }
                     }
 
@@ -51,12 +51,12 @@ const stickiesToList = async (objects) => {
             return result;	
         }
 
-        width = longest_string(texts)[0].length * 5
+        let width = longest_string(texts)[0].length * 5
 
-        textList = texts.join('')
+        /*let textList = texts.join('')*/
         let newList = await miro.board.widgets.create({
             type: 'TEXT',
-            text: '<ul>'+textList+'</ul>',
+            text: '<ul>'+texts.join('')+'</ul>',
             x: objects[0]['x'],
             y: objects[0]['y'] + 100,
             scale: (objects[0].bounds.width/12),
@@ -104,10 +104,11 @@ async function onClick() {
     }
 }
 
-async function onClickToBullet(objects) {
+
+/*async function onClickToBullet(objects) {
     await stickiesToList(objects)
 }
 
 async function onClickToStickies(objects) {
     await listToStickies(objects)
-}
+}*/
