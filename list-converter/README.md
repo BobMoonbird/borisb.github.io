@@ -1,6 +1,6 @@
 **List Converter**
 
-**What**: plugin for [Miro, collaborative whiteboard platform](miro.com/api) tht convert stickies into lists and lists into stickies
+**What**: plugin for [Miro, collaborative whiteboard platform](miro.com/api) that converts stickies into lists and lists into stickies
 
 **Why**: to solve the pain of transfering info to or from brainstorming sessions
 
