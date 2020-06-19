@@ -29,14 +29,14 @@ miro.onReady(() => {
                         return {
                             tooltip: 'Convert into bullet list',
                             svgIcon: iconBulList,
-                            onClick: stickiesToList(objects)
+                            onClick: onClick
                             
                         }
                     } else if (objects.length === 1 && objects[0].type === "TEXT") {
                         return {
                             tooltip: 'convert to stickies',
                             svgIcon: iconStickyBulk,
-                            onClick: listToStickies(objects)
+                            onClick: onClick
                         }
                     }
 
