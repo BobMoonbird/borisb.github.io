@@ -1,0 +1,2 @@
+//creating a card with customs field 
+//miro.board.widgets.create({type: "CARD", card: {customFields:[{value:"this is a custom field", mainColor: "#6f7782", fontColor:"#ffffff", fieldType: "string"}]}})
