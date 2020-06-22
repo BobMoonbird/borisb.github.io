@@ -32,7 +32,7 @@ miro.onReady(() => {
 async function onClick() {
     let objects = await miro.board.selection.get()
     //miro.board.widgets.update({id: objects[0].id, description: "<strong>Custom Fields:</strong><br><ul><li>this is a custom field</li></ul>",card: {customFields:[{value:"this is a custom field", mainColor: "#6f7782", fontColor:"#ffffff", fieldType: "string"}]}})
-    miro.board.ui.openModal({iframeURL: './modal.html', options: {maxWidth: 500, maxHeight: 500}})
+    miro.board.ui.openModal('./modal.html', {maxWidth: 500, maxHeight: 500})
 }
 
 //miro.board.ui.openModal(iframeURL: string, options?: {maxWidth?: number; maxHeight?: number}): Promise<any>
