@@ -29,16 +29,6 @@ miro.onReady(() => {
 
 })
 
-const stickiesToList = async (objects) => {
-    
-}
-
-const listToStickies = async (objects) => {
-
-        
-
-}
-
 async function onClick() {
     
 }
