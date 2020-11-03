@@ -9,7 +9,7 @@ miro.onReady(() => {
          
             getWidgetMenuItems: async() => {
                 const authorized = await miro.isAuthorized()
-                //if (authorized) {
+                if (authorized) {
                     
                     let objects = await miro.board.selection.get()
                     const isStickie = (widget) => widget.type === "STICKER"
@@ -32,7 +32,7 @@ miro.onReady(() => {
                     
                 }
 
-		//	}
+		}
         }
     })
 
