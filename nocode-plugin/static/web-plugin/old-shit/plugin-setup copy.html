@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script src="api.js"></script>
+    <script src="pluginBuilder.js"></script>
+    <script src="renders.js"></script>
+    <link rel="stylesheet" href="plugin-setup.css" />
+    <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
+  </head>
+  <body>
+    <div class="miro-h2">No-Code code coders</div>
+
+    <div id="layout_0">
+      <div id="plugins"></div>
+      <button id="createNewButton" class="miro-btn--small">Create new</button>
+    </div>
+
+    <div id="layout_1" class="hidden">
+      <div id="pluginHeader"></div>
+      <div id="catalogs"></div>
+
+      <div class="main-buttons-container">
+        <div id="createCatalogButton" class="main-button">
+          <img class="main-button-image" src="./icon/folder.svg" />
+          <div class="main-button-text">Add folder</div>
+        </div>
+        <div id="uploadImageButton" class="main-button">
+          <img class="main-button-image" src="./icon/image.svg" />
+          <div class="main-button-text">Add image</div>
+        </div>
+        <div id="pasteIframeCode" class="main-button">
+          <img class="main-button-image" src="./icon/iframe.svg" />
+          <div class="main-button-text">Add iframe</div>
+        </div>
+      </div>
+
+      <button id="saveButton" class="miro-btn--small">Save</button>
+    </div>
+
+    <div id="layout_2" class="hidden"></div>
+
+    <script src="plugin-setup.js"></script>
+  </body>
+</html>

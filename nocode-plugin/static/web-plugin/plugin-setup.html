@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://miro.com/app/static/sdk.1.1.js"></script>
+    <script src="api.js"></script>
+    <script src="pluginBuilder.js"></script>
+    <script src="renders.js"></script>
+    <script src="menu.js"></script>
+    <link rel="stylesheet" href="plugin-setup.css" />
+    <link rel="stylesheet" href="https://miro.com/app/static/styles.1.0.css" />
+  </head>
+  <body>
+    <div class="miro-h2">Plugin builder</div>
+
+    <div id="layout_0">
+      <div class="definition">
+        Welcome to plugin builder. Here you can create custom tools just in a
+        few clicks. You can use it with your team, or share it with other Miro
+        teams all over the world. Watch a short video to learn more.
+      </div>
+      <img class="theme" src="./icon/theme.png" />
+      <div id="createNewButton" class="create-plugin-button">
+        Create your own plugin
+      </div>
+    </div>
+
+    <div id="layout_1" class="hidden">
+      <div class="edit-plugin">
+        <div id="pluginHeader" class="plugin-header">
+          <div id="plugin-header-image" class="plugin-header-image">
+            <label
+              id="pluginIconLabel"
+              class="plugin-header-label"
+              for="plugin-icon-file-input"
+            >
+              Icon
+            </label>
+
+            <input id="plugin-icon-file-input" class="hidden" type="file" />
+          </div>
+          <input class="plugin-header-input" placeholder="Plugin title" />
+        </div>
+
+        <div class="main-buttons-container">
+          <div id="createCatalogButton" class="main-button">
+            <img class="main-button-image" src="./icon/folder.svg" />
+            <div class="main-button-text">Add folder</div>
+          </div>
+          <input
+            id="upload-images-file-input"
+            class="hidden"
+            type="file"
+            multiple
+          />
+          <label
+            id="uploadImageButton"
+            class="main-button"
+            for="upload-images-file-input"
+          >
+            <img class="main-button-image" src="./icon/image.svg" />
+            <div class="main-button-text">Add image</div>
+          </label>
+          <div id="pasteIframeCode" class="main-button">
+            <img class="main-button-image" src="./icon/iframe.svg" />
+            <div class="main-button-text">Add iframe</div>
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div id="catalogs"></div>
+          <div id="items"></div>
+        </div>
+      </div>
+      <div id="saveButton">
+        <img src="./icon/checkmark.svg" /><span class="save-button-title"
+          >Save plugin</span
+        >
+      </div>
+    </div>
+
+    <div id="layout_2" class="hidden">
+      <div id="plugins">
+        <div id="add-new-plugin" class="plugin-list-item">
+          <img class="plugin-list-item-image" src="./icon/plus.svg" /><span
+            class="plugin-list-item-text"
+            >Create new plugin</span
+          >
+        </div>
+
+        <div class="plugin-list-item">
+          <img
+            class="plugin-list-item-image"
+            src="./icon/plugin-icon.svg"
+          /><span class="plugin-list-item-text">SCRUM box</span>
+          <span class="more-dot"></span>
+        </div>
+
+        <div class="plugin-list-item">
+          <img class="plugin-list-item-image" src="./icon/plugin-2.svg" /><span
+            class="plugin-list-item-text"
+            >Chemistry course</span
+          >
+          <span class="more-dot"></span>
+        </div>
+
+        <div class="plugin-list-item">
+          <img class="plugin-list-item-image" src="./icon/plugin-3.svg" /><span
+            class="plugin-list-item-text"
+            >Workshops toolbox</span
+          >
+          <span class="more-dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="menu" class="hidden">
+      <div id="menu-item-open" class="menu-item">Open</div>
+      <div id="menu-item-code" class="menu-item">Get source code</div>
+      <div id="menu-item-edit" class="menu-item">Edit</div>
+      <div id="menu-item-delete" class="menu-item">Detete</div>
+    </div>
+
+    <script src="plugin-setup.js"></script>
+  </body>
+</html>
